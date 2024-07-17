@@ -24,7 +24,7 @@ const port=process.env.PORT;
 
 app.use(bodyParser.json());
 app.use(cors({
-    origin:["online-library-system-frontend-7hrfxay0u.vercel.app"],
+    origin:["online-library-system-frontend.vercel.app"],
     methods:["GET","POST"],
     credentials:true
 }));
