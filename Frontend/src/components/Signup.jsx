@@ -4,7 +4,7 @@ import { useRef,useState } from "react";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 
-export default function Signup() {
+export function Signup() {
   const navigate=useNavigate();
   const ref = useRef();
   const passwordRef = useRef();
