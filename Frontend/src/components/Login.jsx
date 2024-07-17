@@ -4,7 +4,7 @@ import { useRef,useState } from "react";
 import axios from "axios";
 
 
-export default function Login() {
+export function Login() {
   const ref = useRef();
   const passwordRef = useRef();
   const [user,setUser]=useState({email:"",password:""});
