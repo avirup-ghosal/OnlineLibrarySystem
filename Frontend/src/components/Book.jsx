@@ -4,7 +4,7 @@ export function Book(props){
     const [body, setBody] = useState("");
 
     useEffect(() => {
-        fetch("online-library-system-api-eight.vercel.app/"+props.link)
+        fetch("online-library-system-api-psi.vercel.app/"+props.link)
             .then(async (res) => {
                 const json = await res.json();
                 const books = json.books;

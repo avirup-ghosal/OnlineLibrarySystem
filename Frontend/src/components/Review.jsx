@@ -13,7 +13,7 @@ const saveReview = () => {
     const newEntry = { ...form, id: uuidv4() };
     setReview([...review, newEntry]);
 
-    axios.post('online-library-system-api-eight.vercel.app/review', newEntry)
+    axios.post('online-library-system-api-psi.vercel.app/review', newEntry)
       .then(response => {
         console.log('Review saved successfully:', response.data);
       })
@@ -30,7 +30,7 @@ const saveReview = () => {
 useEffect(() => {
   const fetchReviews = async () => {
     try {
-      const response = await axios.get("online-library-system-api-eight.vercel.app/review");
+      const response = await axios.get("online-library-system-api-psi.vercel.app/review");
       console.log("Fetched reviews:", response.data);
       if (Array.isArray(response.data)) {
         setReview(response.data);
