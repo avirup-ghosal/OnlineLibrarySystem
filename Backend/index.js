@@ -1,22 +1,26 @@
+require('dotenv').config();
 const bodyParser = require('body-parser');
 const express=require('express');
 const app=express();
 const cors=require('cors');
 const mongoose=require('mongoose');
 //const tests=require("./db");
-mongoose.connect("mongodb://localhost:27017/onlinelibrary");
+const db_url=process.env.DB_URL;
+mongoose.connect(db_url);
 const bcrypt=require("bcryptjs");
 //const {body, validationResult}=require("express-validator");
 const jwt=require("jsonwebtoken");
+const { configDotenv } = require('dotenv');
+configDotenv(); 
 
-const JWT_SECRET='Hritesh$saha$'
+const JWT_SECRET=process.env.JWT_SECRET;
 
 const db=mongoose.connection
 db.once('open',()=>{
     console.log("Mongodb Connection Successful")
 })
 
-const port=3002;
+const port=process.env.PORT;
 
 app.use(bodyParser.json());
 app.use(cors({
