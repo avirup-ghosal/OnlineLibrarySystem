@@ -12,7 +12,7 @@ export function Test(props) {
         async function fetchBooks() {
             const fetchedBookComponents = await Promise.all(subjects.map(async (subject, index) => {
                 try {
-                    const res = await fetch("http://localhost:3002/" + subject);
+                    const res = await fetch("online-library-system-api-eight.vercel.app/" + subject);
                     const json = await res.json();
                     const books = json.books;
                     const subjectname = books[0].subject;
