@@ -30,7 +30,7 @@ const saveReview = () => {
 useEffect(() => {
   const fetchReviews = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/review");
+      const response = await axios.get("online-library-system-api-eight.vercel.app/review");
       console.log("Fetched reviews:", response.data);
       if (Array.isArray(response.data)) {
         setReview(response.data);
